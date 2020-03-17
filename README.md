@@ -31,4 +31,4 @@ DEBUG=0
 ARCH= -gencode arch=compute_61,code=compute_61
 ```
 ## Step 4: Make
-$ make -j16
+$ make -j $(($(nproc) + 1))
