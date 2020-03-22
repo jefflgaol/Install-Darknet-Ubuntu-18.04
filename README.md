@@ -30,7 +30,17 @@ OPENMP=0
 DEBUG=0
 ARCH= -gencode arch=compute_61,code=compute_61
 ```
-## Step 4: Make
+## Step 4: Install OpenCV library
+```
+$ sudo apt-get install libopencv-dev 
+```
+## Step 5: Change gcc
+https://github.com/ethereum-mining/ethminer/issues/731#issuecomment-395195527
+```
+$ sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 10
+$ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-6 10
+```
+## Step 6: Make
 ```
 $ make -j $(($(nproc) + 1))
 ```
